@@ -222,3 +222,73 @@ function reverseArray(arr) {
   }
   return newArray;
 }
+//Object
+//Ex1
+function getName(obj) {
+  return obj.name;
+}
+//Ex2
+function updateAge(obj, newAge) {
+  obj.age = newAge;
+}
+//Ex3
+function addProperty(obj, propName) {
+  obj[propName] = null;
+}
+//Ex4
+function deleteProperty(obj, propName) {
+  delete obj[propName];
+}
+//Ex5
+function countProperties(obj) {
+  let count = 0;
+  for (let key in obj) {
+    count++;
+  }
+  return count;
+}
+//Ex6
+function hasProperty(obj, propName) {
+return (obj[propName] !== undefined)
+} 
+//Ex7
+function getValues(obj) {
+  let values = [];
+  for (let key in obj) {
+    values.push(obj[key]);
+  }
+  return values;
+}
+//Ex8
+function areEqual(obj1, obj2) {
+  for (let key in obj1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  for (let key in obj2) {
+    if (obj2[key] !== obj1[key]) {
+      return false;
+    }
+  }
+  return true;
+}
+//Ex9
+function copyObject(obj) {
+  let newObj = {};
+  for (let key in obj) {
+    newObj[key] = obj[key];
+  }
+  return newObj;
+}
+//Ex10
+function mergeObjects(obj1, obj2) {
+  let newObj = {};
+  for (let key in obj1) {
+    newObj[key] = obj1[key];
+  }
+  for (let key in obj2) {
+    newObj[key] = obj2[key];
+  }
+  return newObj
+}
