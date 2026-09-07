@@ -12,7 +12,7 @@ function Mult(n1,n2){
     return n1*n2
 }
 //Ex4
-function Sum(n1,n2){
+function Div(n1,n2){
     return n1/n2
 }
 //Ex5
@@ -33,13 +33,11 @@ function Abs(n1){
 }
 //Ex9 
 function Redom(n1){
-    let cmp= parseInt(n1)
-    return n1>=0?n1-cmp<0.5?cmp:cmp+1:cmp-n1<0.5?cmp:cmp-1
+    return Math.round(n1)
 }
 //Ex10
 function Random(){
-    const lol =new Date().getSeconds()
-    return ((1/Date.now())**(1/12))*(1/lol)
+   return Math.random()
 }
 //Letras 
 //Ex1
@@ -60,7 +58,7 @@ function Lower(cad1){
 }
 //Ex5
 function Index(cad1,x){
-    return cad1[x]
+    return x>=0&&x<cad1.length?cad1[x]:undefined
 }
 //Ex6
 function Reverse(cad1){
@@ -82,6 +80,7 @@ function withoutBlank(cad1){
 }
 //Ex9
 function IsPalimdrome(cad1){
+    cad1= withoutBlank(cad1).toLowerCase()
     return cad1===Reverse(cad1)
 }
 //Ex10
@@ -249,7 +248,7 @@ function countProperties(obj) {
 }
 //Ex6
 function hasProperty(obj, propName) {
-return (obj[propName] !== undefined)
+ return propName in obj
 } 
 //Ex7
 function getValues(obj) {
@@ -316,9 +315,9 @@ console.log(Mult(-4,7));
 
 //Ex4 Sum (DIV)
 console.log("Prueba del ejercicio 4 de la categoría Números");
-console.log(Sum(10,2));
-console.log(Sum(9,3));
-console.log(Sum(5,2));
+console.log(Div(10,2));
+console.log(Div(9,3));
+console.log(Div(5,2));
 
 //Ex5 Pow
 console.log("Prueba del ejercicio 5 de la categoría Números");
